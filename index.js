@@ -1,0 +1,1 @@
+let pregunta = prompt("Dime cualquier cosa");
