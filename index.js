@@ -1,8 +1,8 @@
-/*Primero se crea una variable const el canvas con llamando el Id de html, igual con el 
+/*Primero se crea una variable const el canvas Countercon llamando el Id de html, igual con el 
 context que va a contener el objeto 2d.*/
 
-const canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
+const CANVAS = document.getElementById("canvas");
+const CONTEXT = CANVAS.getContext("2d");
 let lastTime = 0;
 let dropInterval = 1000;
 let dropCounter = 0;
@@ -10,8 +10,8 @@ let dropCounter = 0;
 /*Se crea la constante grid, para declarar la funcion createMatriz con 10 columnas y 10 filas.
 otra constante llamada formas donde es igual a un objeto, que tendran claves de pos de posicion
 en x y en y en 0 y matriz donde va contener los tetrimonios*/ 
-const grid = createMatriz(10,20);
-const player = {
+const GRID = createMatriz(10,20);
+const PLAYER = {
     pos: {x: 0, y: 0},
     matriz: null,
     next: null,
@@ -19,7 +19,7 @@ const player = {
     lines: 0,
     level: 0,
 };
-const colors = [
+const COLORS = [
     null,
     "red",
     "deepskyblue",
@@ -31,7 +31,7 @@ const colors = [
 ]
 
 /*Se llama la variable context para que escale cada figura en X y en Y por 20*/
-context.scale(25,30);
+CONTEXT.scale(25,30);
 
 /*Hacemos otra funcion llamado createPiece, como parametro tipo, entonces si su tipo es igual a
 T entonces retorna la matriz y antes el valor tenia esta matriz y se pasa a null, porque su
@@ -99,12 +99,12 @@ variable matriz y posicion que es donde accede al objeto de formas con su clave,
 que donde Y y X es igual a 0 y sean menor a la longitud de la matriz, entonces se le suma a 1 en y 
 y X, entonces si la matriz en Y X y las posiciones que tiene grid ni la forma no es igual a 0
 entonces returna true, si no es falso o que deja pasar*/
-function collide(grid, player){
-    const matriz = player.matriz;
-    const offset = player.pos;
+function collide(GRID, PLAYER){
+    const matriz = PLAYER.matriz;
+    const offset = PLAYER.pos;
     for(let y = 0; y < matriz.length; y++){
         for(let x = 0; x < matriz[y].length; x++){
-            if(matriz[y][x] !== 0 && (grid[y + offset.y] && grid[y + offset.y][x + offset.x])!== 0){
+            if(matriz[y][x] !== 0 && (GRID[y + offset.y] && GRID[y + offset.y][x + offset.x])!== 0){
                 return true;
             }
         }
@@ -116,11 +116,11 @@ function collide(grid, player){
 /*Creamos la funcion merge recorriendo la matriz en Y y en X, si el valor no es igual a 0 se crea
 una nueva. No es necesario asignarle un redibujado, porque ya se está ejecutando en la funcion
 drawMatriz*/
-function merge(grid, player){
-    player.matriz.forEach((row, y)=>{
+function merge(GRID, PLAYER){
+    PLAYER.matriz.forEach((row, y)=>{
         row.forEach((value, x)=>{
             if(value !== 0){
-                grid[y + player.pos.y][x + player.pos.x] = value;
+                GRID[y + PLAYER.pos.y][x + PLAYER.pos.x] = value;
             }
         })
     })
@@ -130,7 +130,7 @@ function drawMatriz(matriz, offset){ //2 parametros la matriz de la tetraminio q
     matriz.forEach((row, y) => {
         row.forEach((value, x) => {
             if(value !==0){
-                CONTEXT.fillStyle= colors[value];
+                CONTEXT.fillStyle= COLORS[value];
                 CONTEXT.fillRect(x + offset.x, y + offset.y, 1, 1);
             }
         });
@@ -142,7 +142,7 @@ function drawMatriz(matriz, offset){ //2 parametros la matriz de la tetraminio q
 
 
 function draw(){
-    CONTEXT.fillStyle= "#000";//color del fondo del canvas
+    CONTEXT.fillStyle= "black";//color del fondo del canvas
     CONTEXT.fillRect(0, 0, CANVAS.width, CANVAS.height);// los ceros son la posiciones y las otras dos variables son el tamaño y ancho
     drawMatriz(GRID,{x:0, y:0});//la posicion de la pieza de matriz
     drawMatriz(PLAYER.matriz, PLAYER.pos);// la pieza actual de la constante playes
