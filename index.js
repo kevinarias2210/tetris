@@ -94,3 +94,21 @@ function createMatriz(width,height){
     console.table(matriz);
     return matriz;
 }
+
+/*Se crea la funcion collision, llamando como parametros a las variables grid y formas, se crea la
+variable matriz y posicion que es donde accede al objeto de formas con su clave, con un ciclo for
+que donde Y y X es igual a 0 y sean menor a la longitud de la matriz, entonces se le suma a 1 en y 
+y X, entonces si la matriz en Y X y las posiciones que tiene grid ni la forma no es igual a 0
+entonces returna true, si no es falso o que deja pasar*/
+function collision(grid, formas){
+    const matriz = formas.matriz;
+    const posicion = formas.pos;
+    for(let y = 0; y < matriz.length; y++){
+        for(let x = 0; x < matriz[y].length; x++){
+            if(matriz[y][x] !== 0 && (grid[y + posicion.y] && grid[y + posicion.y][x + posicion.x])!== 0){
+                return true;
+            }
+        }
+    }
+    return false;
+}
