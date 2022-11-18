@@ -5,10 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tetriss</title>
+    <link rel="stylesheet" href="edward.css">
     
 </head>
 <body>
-    <canvas id="tetris" width=" 200" height="400"></canvas><!-- aqui se le da el tamaño del canvas y la id  -->
+<div class="tetrisTodo">
+        <div class="tablaDeDatos">
+            <p>Score</p> 
+            <div id="score"></div>
+            <p>Lineas</p>
+            <div id="line"></div>
+            <p>Nivel</p>
+            <div id="level"></div>
+            
+        </div>
+        
+        <div class="tetrisGran">
+            <canvas id="tetris" width=" 200" height="400"></canvas><!-- aqui se le da el tamaño del canvas y la id  -->
+        </div>
+</div>
+    
     <script src="tetris.js"></script>
 </body>
 </html>
