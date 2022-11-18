@@ -14,7 +14,6 @@ const GRID = createMatriz(10,20);
 const PLAYER = {
     pos: {x: 0, y: 0},
     matriz: null,
-    next: null,
     score: 0,
     lines: 0,
     level: 0,
@@ -99,7 +98,7 @@ variable matriz y posicion que es donde accede al objeto de formas con su clave,
 que donde Y y X es igual a 0 y sean menor a la longitud de la matriz, entonces se le suma a 1 en y 
 y X, entonces si la matriz en Y X y las posiciones que tiene grid ni la forma no es igual a 0
 entonces returna true, si no es falso o que deja pasar*/
-function collide(GRID, PLAYER){
+function colicion(GRID, PLAYER){
     const matriz = PLAYER.matriz;
     const offset = PLAYER.pos;
     for(let y = 0; y < matriz.length; y++){
@@ -163,9 +162,9 @@ function gridSweep(){
         ++y;
 
         PLAYER.score +=rowCount*10;
-        PLAYER.line ++;
+        PLAYER.lines ++;
         rowCount +=2;
-        if(PLAYER.line%3===0) PLAYER.level++;
+        if(PLAYER.lines%3===0) PLAYER.level++;
     }
 }
 
@@ -238,7 +237,7 @@ function playerReset(){
         GRID.forEach(row=> row.fill(0));
         PLAYER.score=0;
         PLAYER.level=0;
-        PLAYER.line=0;
+        PLAYER.lines=0;
         updatescore();
     }
 }
@@ -246,7 +245,7 @@ function playerReset(){
 
 function updatescore(){//funcion para mostar el score
     document.getElementById("score").innerHTML=PLAYER.score;//innerhmtl es para que aparezca en la web
-    document.getElementById("line").innerHTML=PLAYER.line;
+    document.getElementById("lines").innerHTML=PLAYER.lines;
     document.getElementById("level").innerHTML=PLAYER.level;
 }
 
