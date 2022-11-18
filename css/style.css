@@ -49,3 +49,21 @@ body{
 .s{
     color: #14df78;
 }
+
+.header__cuentas{
+    display: flex; 
+}
+
+.header__cuentas--score{
+    margin-right: 25px;
+    padding: 5px 10px;
+    box-shadow: -2px 3px 12px 4px red;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__cuentas--score p{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffa4ce;
+}
