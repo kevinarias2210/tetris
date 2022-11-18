@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../neon2.jpg);
+    background-repeat: no-repeat;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.header__titulo{
+    display: flex;
+    margin-right: 180px;
+    padding: 5px 10px ;
+    box-shadow: -2px 3px 12px 4px red;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__titulo h1{
+    font-family: 'Monoton', cursive;
+    font-size: 5em;
+}
