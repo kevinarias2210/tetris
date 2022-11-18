@@ -67,3 +67,51 @@ body{
     text-align: center;
     color: #ffa4ce;
 }
+
+#score{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffa4ce;
+}
+
+.header__cuentas--lines{
+    margin-right: 25px;
+    padding: 5px 10px;
+    box-shadow: -2px 3px 12px 4px #27ff00;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__cuentas--lines p{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #00ff7e;
+}
+
+#lines{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #00ff7e;
+}
+
+.header__cuentas--level{
+    padding: 5px 10px;
+    box-shadow: -2px 3px 12px 4px #00adff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__cuentas--level p{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #79d5ff;
+}
+
+#level{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #79d5ff;
+}
