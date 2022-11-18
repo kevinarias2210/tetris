@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.tetrisTodo {
+    display:flex ;
+    justify-content: center;
+}
+canvas{
+    border-radius: 2%;
+}
