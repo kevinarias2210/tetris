@@ -29,3 +29,55 @@ const colores = [
     "purple",
     "darkorange",
 ]
+
+/*Se llama la variable ctx para que escale cada figura en X y en Y por 20*/
+ctx.scale(25,30);
+
+/*Hacemos otra funcion llamado crearFormas, como parametro tipo, entonces si su tipo es igual a
+T entonces retorna la matriz y antes el valor tenia esta matriz y se pasa a null, porque su
+valor está vacío.*/
+function crearFormas(tipo){
+    if(tipo === "T"){
+        return [
+            [0,0,0],
+            [1,1,1],
+            [0,1,0]
+        ];
+    }else if(tipo === "O"){
+        return [
+            [2,2],
+            [2,2]
+        ];
+    }else if(tipo === "L"){
+        return [
+            [0,3,0],
+            [0,3,0],
+            [0,3,3]
+        ];
+    }else if(tipo === "J"){
+        return [
+            [0,4,0],
+            [0,4,0],
+            [4,4,0]
+        ];
+    }else if(tipo === "I"){
+        return [
+            [0,5,0,0],
+            [0,5,0,0],
+            [0,5,0,0],
+            [0,5,0,0]
+        ];
+    }else if(tipo === "S"){
+        return [
+            [0,6,6],
+            [6,6,0],
+            [0,0,0]
+        ];
+    }else if(tipo === "Z"){
+        return [
+            [7,7,0],
+            [0,7,7],
+            [0,0,0]
+        ];
+    }
+}
