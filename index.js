@@ -81,3 +81,16 @@ function crearFormas(tipo){
         ];
     }
 }
+
+/*Se crea la funcion con parametros como variables width, height. Se crea una variable constante
+matriz igual a un array vacio y un ciclo que donde el alto es menor a 1, la matriz que es el
+array vacio, mande un nuevo array con ancho que se rellene(.fill) en 0, para crear la tabla
+como tal y por ultimo se retorna la matriz*/
+function createMatriz(width,height){
+    const matriz = [];
+    while(height--){
+        matriz.push(new Array(width).fill(0));
+    }
+    console.table(matriz);
+    return matriz;
+}
