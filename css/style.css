@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../neon2.jpg);
+    background-repeat: no-repeat;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.header__titulo{
+    display: flex;
+    margin-right: 180px;
+    padding: 5px 10px ;
+    box-shadow: -2px 3px 12px 4px red;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__titulo h1{
+    font-family: 'Monoton', cursive;
+    font-size: 5em;
+}
+
+.t{
+    color: #cf0060;
+}
+
+.e{
+    color: #13a8fe;
+}
+
+.r{
+    color: #14df78;
+}
+
+.i{
+    color: #13a8fe;
+}
+
+.s{
+    color: #14df78;
+}
+
+.header__cuentas{
+    display: flex; 
+}
+
+.header__cuentas--score{
+    margin-right: 25px;
+    padding: 5px 10px;
+    box-shadow: -2px 3px 12px 4px red;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__cuentas--score p{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffa4ce;
+}
+
+#score{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffa4ce;
+}
+
+.header__cuentas--lines{
+    margin-right: 25px;
+    padding: 5px 10px;
+    box-shadow: -2px 3px 12px 4px #27ff00;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__cuentas--lines p{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #00ff7e;
+}
+
+#lines{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #00ff7e;
+}
+
+.header__cuentas--level{
+    padding: 5px 10px;
+    box-shadow: -2px 3px 12px 4px #00adff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__cuentas--level p{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #79d5ff;
+}
+
+#level{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #79d5ff;
+}
+
+.main{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid #7600d1;
+}
