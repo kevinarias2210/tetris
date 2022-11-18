@@ -112,3 +112,17 @@ function collision(grid, formas){
     }
     return false;
 }
+
+
+/*Creamos la funcion merge recorriendo la matriz en Y y en X, si el valor no es igual a 0 se crea
+una nueva. No es necesario asignarle un redibujado, porque ya se está ejecutando en la funcion
+drawMatriz*/
+function merge(grid, formas){
+    formas.matriz.forEach((row, y)=>{
+        row.forEach((value, x)=>{
+            if(value !== 0){
+                grid[y + formas.pos.y][x + formas.pos.x] = value;
+            }
+        })
+    })
+}
