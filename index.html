@@ -5,10 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <title>Tetris</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__titulo">
+            <h1 class="t">T</h1>
+            <h1 class="e">e</h1>
+            <h1 class="t">t</h1>
+            <h1 class="r">r</h1>
+            <h1 class="i">i</h1>
+            <h1 class="s">s</h1>
+        </div>
+        <div class="header__cuentas">
+            <div class="header__cuentas--score">
+                <p>SCORE</p>
+                <div id="score"></div>
+            </div>
+            <div class="header__cuentas--lines">
+                <p>LINES</p>
+                <div id="lines"></div>
+            </div>
+            <div class="header__cuentas--level">
+                <p>LEVEL</p>
+                <div id="level"></div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <canvas id="canvas" width="250" height="600"></canvas>
+    </main>
 </body>
 <script src="index.js"></script>
 </html>
