@@ -147,7 +147,7 @@ button{
     border-color: rgb(207, 193, 193);
 }
 
-@media (max-width: 912px){
+@media (max-width: 920px){
     .header{
         flex-direction: column;
         padding: 25px 20px;
@@ -214,20 +214,50 @@ button{
     
 }
 
-@media (max-width: 375px){
+@media (min-width: 320px){
+    .main{
+        height: 78vh;
+    }
+}
+
+@media (min-width: 360px){
+    .main{
+        height: 92vh;
+    }
+}
+
+@media (min-width: 375px){
     .main{
         height: 100vh;
     }
 }
 
+@media (min-width: 390px){
+    .main{
+        height: 80vh;
+    }
+}
+
 @media (min-width: 414px){
     .main{
-        height: 100vh;
+        height: 77vh;
+    }
+}
+
+@media (min-width: 540px){
+    .main{
+        height: 96vh;
     }
 }
 
 @media (min-width: 820px){
     .main{
         height: 75vh;
+    }
+}
+
+@media (min-width: 912px){
+    .main{
+        height: 60vh;
     }
 }
