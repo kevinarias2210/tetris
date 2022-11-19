@@ -244,6 +244,7 @@ function playerReset(){
         PLAYER.level=0;
         PLAYER.lines=0;
         updatescore();
+        alert("Game Over");
     }
 }
 
