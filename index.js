@@ -1,6 +1,10 @@
 
 /*Primero se crea una variable const el canvas Countercon llamando el Id de html, igual con el 
 context que va a contener el objeto 2d.*/
+const btn1 = document.getElementById("abajo");
+const btn2 = document.getElementById("izquierda");
+const btn3 = document.getElementById("derecha");
+const btn4 = document.getElementById("rotar");
 
 const CANVAS = document.getElementById("canvas");
 const CONTEXT = CANVAS.getContext("2d");
@@ -217,7 +221,7 @@ function playerRotate(){
         if(offset>PLAYER.matriz[0].length){
             rotate(PLAYER.matriz);
             PLAYER.pos.x=pos;
-            return;
+            return; 
         }
     }
 }
@@ -245,7 +249,7 @@ function playerReset(){
         PLAYER.lines=0;
         updatescore();
         alert("game over")
-    }
+    }   
 }
 
 
@@ -268,6 +272,19 @@ document.addEventListener("keydown", event =>{//se llama un keydow para ejecutar
         playerRotate();
     }
 }); 
+
+btn1.addEventListener("click" , event =>{
+    playerDrop();
+});
+btn2.addEventListener("click" , event =>{
+    playerMove(-1);
+});
+btn3.addEventListener("click" , event =>{
+    playerMove(1); 
+});
+btn4.addEventListener("click" , event =>{
+    playerRotate();
+});
 
 
 
