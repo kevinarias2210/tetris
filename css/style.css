@@ -128,3 +128,69 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     border: 5px solid #7600d1;
 }
+
+@media (max-width: 920px){
+    .header{
+        flex-direction: column;
+        padding: 25px 20px;
+    }
+    
+    .header__titulo{
+        margin-right: 0;
+        padding: 10px 5px ;
+    }
+    
+    .header__titulo h1{
+        font-size: 3em;
+    }
+    .header__cuentas{
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .header__cuentas--score{
+        margin: 0 10px;
+    }
+    
+    .header__cuentas--score p{
+        font-size: 1.2em;
+    }
+    
+    #score{
+        font-size: 1.2em;
+    }
+    
+    .header__cuentas--lines{
+        margin: 0 10px;
+    }
+    
+    .header__cuentas--lines p{
+        font-size: 1.2em;
+    }
+    
+    #lines{
+        font-size: 1.2em;
+    }
+    
+    .header__cuentas--level{
+        margin: 0 10px;
+    }
+
+    .header__cuentas--level p{
+        font-size: 1.2em;
+    }
+    
+    #level{
+        font-size: 1.2em;
+    }
+
+    .main{
+        height: 78vh;
+        align-items: flex-start;
+    }
+    
+}
+
+@media (min-width: 780px){
+
+}
