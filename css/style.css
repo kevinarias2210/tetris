@@ -116,6 +116,11 @@ body{
     color: #79d5ff;
 }
 
+#canvas{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid #7600d1;
+}
+
 .main{
     width: 100%;
     height: 70vh;
@@ -124,12 +129,25 @@ body{
     align-items: center;
 }
 
-#canvas{
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 5px solid #7600d1;
+/* botones  */
+.botones{
+    display: none;
+    justify-content: center;
 }
 
-@media (max-width: 920px){
+button{
+    margin: 10px;
+    width: 50px; height: 50px;
+    font-size: 30px;
+    box-shadow: -2px 3px 12px 4px red;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #00ff7e;
+    border-radius: 40%;
+    border:solid;
+    border-color: rgb(207, 193, 193);
+}
+
+@media (max-width: 912px){
     .header{
         flex-direction: column;
         padding: 25px 20px;
@@ -186,11 +204,30 @@ body{
 
     .main{
         height: 78vh;
-        align-items: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .botones{
+        display: flex;
     }
     
 }
 
-@media (min-width: 780px){
+@media (max-width: 375px){
+    .main{
+        height: 100vh;
+    }
+}
 
+@media (min-width: 414px){
+    .main{
+        height: 100vh;
+    }
+}
+
+@media (min-width: 820px){
+    .main{
+        height: 75vh;
+    }
 }

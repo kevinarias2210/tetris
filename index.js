@@ -27,7 +27,12 @@ const COLORS = [
     "orange",
     "purple",
     "darkorange",
-]
+];
+
+const btn1 = document.getElementById("abajo");
+const btn2 = document.getElementById("izquierda");
+const btn3 = document.getElementById("derecha");
+const btn4 = document.getElementById("rotar");
 
 /*Se llama la variable context para que escale cada figura en X y en Y por 20*/
 CONTEXT.scale(25,30);
@@ -261,7 +266,21 @@ document.addEventListener("keydown", event =>{//se llama un keydow para ejecutar
     }else if(event.key==="w" || event.key==="ArrowUp"){
         playerRotate();
     }
-}); 
+});
+
+
+btn1.addEventListener("click" , event =>{
+    playerDrop();
+});
+btn2.addEventListener("click" , event =>{
+    playerMove(-1);
+});
+btn3.addEventListener("click" , event =>{
+    playerMove(1); 
+});
+btn4.addEventListener("click" , event =>{
+    playerRotate();
+});
 
 
 
